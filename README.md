@@ -138,14 +138,6 @@ Interactive word-guessing game built with Flutter
 
 ---
 
-<div align="center">
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <img src="assets/Screenshot5.png" width="280">
-    <img src="assets/Screenshot3.png" width="280">
-    <img src="assets/Screenshot4.png" width="280">
-  </div>
-</div>
-
 ## Installation  
 1. **Prerequisites:**  
    - Flutter SDK 3.16+  
