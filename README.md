@@ -3,18 +3,75 @@ Interactive word-guessing game built with Flutter
 
 <div align="center">
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <img src="assets/Screenshot1.png" width="280">
-    <img src="assets/Screenshot2.png" width="280">
+    <img src="assets/Screenshot1.png" width="280" alt="Ana Ekran">
+    <img src="assets/Screenshot2.png" width="280" alt="Oyun Ekranı">
   </div>
 </div>
 
 ---
 
-## Project Purpose  
-A mobile game designed to educate users about world cities through an engaging experience. Key features:  
-- Guess city names letter-by-letter  
-- Discover cultural and geographical facts  
-- Save unlocked cities to a personal collection  
+## Core Features by Page
+
+### 🏠 Home Page
+- **Purpose:** Main navigation hub
+- **Key Elements:**  
+  - Start Game button (directs to Game Page)  
+  - Login button (redirects to Login Page)  
+  - Retro-style title animation  
+  - Dynamic background gradient  
+
+### 🎮 Game Page
+- **Purpose:** City guessing mechanics
+- **Key Elements:**  
+  - Interactive letter grid (6x4 layout)  
+  - Real-time attempt counter (6 attempts)  
+  - Dynamic score tracker  
+  - Context-sensitive sound effects  
+  - Hidden city description reveal  
+
+### 🔐 Login Page
+- **Purpose:** User authentication
+- **Key Elements:**  
+  - Unique username validation  
+  - In-memory credential storage  
+  - Gradient background with floating particles  
+  - Error handling for empty inputs  
+
+### 📚 Saved Cities Page
+- **Purpose:** Progress tracking
+- **Key Elements:**  
+  - Card-based city display  
+  - Expandable description sections  
+  - Auto-save on game victory  
+  - Responsive list view  
+
+---
+
+<div align="center">
+  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <img src="assets/Screenshot5.png" width="280" alt="Giriş Ekranı">
+    <img src="assets/Screenshot3.png" width="280" alt="Kayıtlı Şehirler">
+    <img src="assets/Screenshot4.png" width="280" alt="Oyun Sonu">
+  </div>
+</div>
+
+---
+
+## Technical Implementation Details
+
+### App Drawer Component
+- **Dynamic Logo:** Fetched from MockAPI endpoint  
+- **Navigation Items:**  
+  - Home  
+  - Saved Cities  
+  - Settings (future implementation)  
+- **State Management:** Provider pattern for menu toggle
+
+### Game Logic Flow
+1. Random city selection from 100+ entries  
+2. Letter validation through hash maps  
+3. Win condition: Full city name reveal  
+4. Loss condition: 6 incorrect attempts  
 
 ---
 
