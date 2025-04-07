@@ -20,6 +20,8 @@ List<String> letters = [
   'P', 'R', 'S', 'T', 'U',
   'V', 'Y', 'Z'
 ];
+
+
 var word_dict = {
   // ORTA DOĞU & ASYA
   "JERUSALEM": "The holy city for 3 religions. (Israel/Palestine)",
@@ -137,13 +139,13 @@ List images = [
 class _GameState extends State<Game> {
   late String word;
   late String description;
-  List<String> guessedletters = [];
-  List<String> wrongletters = [];
+  List<String> guessedletters = []; //Kullanıcının tahmin ettiği harfler listesi
+  List<String> wrongletters = []; //yanlış harf listesi
   int points = 0;
   int status = 0;
 
-  final AudioPlayer _audioPlayer = AudioPlayer(); // Добавлено
-  bool _soundOn = true; // Состояние звука
+  final AudioPlayer _audioPlayer = AudioPlayer(); 
+  bool _soundOn = true; //Sesin durumu
 
   @override
   void initState() {
@@ -160,6 +162,7 @@ class _GameState extends State<Game> {
   }
 
   descpopup() {
+    /*Şehir ile ilgili bilgieri içeren popup*/
     return showDialog(
       context: context,
       builder: (context) {
@@ -203,6 +206,7 @@ class _GameState extends State<Game> {
   }
 
   openpopup(String title) {
+    /*Kullanıcının toplam puanını ve kazanma durumunu gösteren pop up*/
     return showDialog(
       barrierDismissible: false,
       context: context,
@@ -224,13 +228,13 @@ class _GameState extends State<Game> {
                         fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center),
                 SizedBox(height: 5),
-                Text("City: $word",
+                Text("City: $word", //Oyunda gizli olan kelime
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
                         fontWeight: FontWeight.w700)),
                 SizedBox(height: 5),
-                Text("Total points: $points",
+                Text("Total points: $points", //Kullanıcının toplam puanı
                     style: TextStyle(
                         fontFamily: 'RetroGaming',
                         color: Colors.white,
@@ -240,7 +244,7 @@ class _GameState extends State<Game> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    ElevatedButton(
+                    ElevatedButton( //Tekrar oynama butonu
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -255,7 +259,7 @@ class _GameState extends State<Game> {
                               fontWeight: FontWeight.bold)),
                     ),
                     SizedBox(height: 10),
-                    ElevatedButton(
+                    ElevatedButton( // Şehir hakkında bilgi edinme butonu
                       onPressed: () {
                         descpopup();
                       },
@@ -292,6 +296,7 @@ class _GameState extends State<Game> {
   }
 
   checkletter(String letter) {
+    /*Kullanıcının girdiği harf kontrol edilir ve ona göre uygun listeye eklenir, puan eklemesin de bu fonksiyon ile yapılır*/
     if (word.contains(letter)) {
       setState(() {
         guessedletters.add(letter);
@@ -345,7 +350,7 @@ class _GameState extends State<Game> {
         actions: [
           IconButton(
             iconSize: 25,
-            icon: Icon(_soundOn ? Icons.volume_up_sharp : Icons.volume_off),
+            icon: Icon(_soundOn ? Icons.volume_up_sharp : Icons.volume_off), //ses ikonu kontrolü
             color: Colors.black,
             onPressed: () {
               setState(() {
@@ -371,7 +376,7 @@ class _GameState extends State<Game> {
                 ),
                 height: 30,
                 child: Center(
-                  child: Text("$points points",
+                  child: Text("$points points", //Kullanıcının topladığı puanlar
                       style: TextStyle(
                           fontFamily: 'RetroGaming',
                           color: Colors.black,
@@ -386,7 +391,7 @@ class _GameState extends State<Game> {
                   image: AssetImage(images[status]),
                   fit: BoxFit.cover),
               SizedBox(height: 15),
-              Text("${6 - status} tries left",
+              Text("${6 - status} tries left", //Kalan deneme hakkı
                   style: TextStyle(
                       fontFamily: 'RetroGaming',
                       color: Colors.grey,
@@ -413,6 +418,7 @@ class _GameState extends State<Game> {
                   bool isGuessed = guessedletters.contains(letter);
                   bool isWrong = wrongletters.contains(letter);
 
+                  //Doğru veya yanlış tahmine göre harflerin renk değiştirmesi
                   Color letterColor = Colors.white;
                   if (isGuessed) {
                     letterColor = Colors.green;
@@ -420,7 +426,7 @@ class _GameState extends State<Game> {
                     letterColor = Colors.red;
                   }
 
-                  return InkWell(
+                  return InkWell( //Klavye bölümü
                     onTap: () => checkletter(letter),
                     child: Center(
                       child: Text(
