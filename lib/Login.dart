@@ -90,6 +90,7 @@ class _LoginState extends State<Login> {
       final username = _usernameController.text.trim();
       final password = _passwordController.text.trim();
 
+      //Kullanıcı adı veya şifrenin eksik olma durumu
       if (username.isEmpty || password.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("Username and password can not be null!")),
@@ -97,7 +98,7 @@ class _LoginState extends State<Login> {
         return;
       }
 
-      // Kullanıcı adı kontrolü
+      // Kullanıcı adı tekrarı kontrolü
       if (_userCredentials.containsKey(username)) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -128,7 +129,7 @@ class _LoginState extends State<Login> {
         MaterialPageRoute(builder: (context) => const Game()),
       );
     },
-    style: ElevatedButton.styleFrom(
+    style: ElevatedButton.styleFrom( //Giriş yap butonu
       foregroundColor: Colors.black,
       backgroundColor: Colors.white,
       shape: const StadiumBorder(),
