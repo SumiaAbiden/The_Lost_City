@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // "Debug" yazısını kaldırır
-      initialRoute: '/',
+      initialRoute: '/', //kod çalıştıktan sonra ilk açılacak sayfa
       routes: {
         '/': (context) => Home(),
         '/login': (context) => Login(),
