@@ -39,10 +39,11 @@ class Home extends StatelessWidget {
                 fontSize: 40,
                 fontWeight: FontWeight.w700
             )),
+
             // Yuvarlak Resim
             CircleAvatar(
               radius: 60,
-              backgroundImage: AssetImage('assets/img.png'),
+              backgroundImage: AssetImage('assets/img.png'), //logo resmi bu kısımda kaydedilen dosyalardan alınmıştır
               backgroundColor: Colors.white,
             ),
             SizedBox(height: 40),
@@ -50,7 +51,7 @@ class Home extends StatelessWidget {
             // Buton 1
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-              child: ElevatedButton(
+              child: ElevatedButton( //Oyun başlatma butonu
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromRGBO(49, 112, 117, 100),
                   minimumSize: Size(double.infinity, 50),
@@ -74,7 +75,7 @@ class Home extends StatelessWidget {
             // Buton 2
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-              child: ElevatedButton(
+              child: ElevatedButton( //Login sayfasına yönlendirme
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color.fromRGBO(49, 112, 117, 100),
                   minimumSize: Size(double.infinity, 50),
