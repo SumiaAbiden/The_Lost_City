@@ -311,6 +311,7 @@ class _GameState extends State<Game> {
       _playSound("wrong"); //
     }
 
+    //Kazanma durumu kontrolü
     bool isWon = true;
     for (int i = 0; i < word.length; i++) {
       String character = word[i];
@@ -321,13 +322,13 @@ class _GameState extends State<Game> {
     }
 
     if (isWon) {
-      _playSound("win");
+      _playSound("win"); //Kazanma müziği
       openpopup("YOU WON!");
       return;
     }
 
     if (status >= 6) {
-      _playSound("lose"); // Звук поражения
+      _playSound("lose"); //Kaybetme müziği
       openpopup("GAME OVER!");
       return;
     }
@@ -360,7 +361,7 @@ class _GameState extends State<Game> {
           )
         ],
       ),
-      drawer: const AppDrawer(),
+      drawer: const AppDrawer(), //Drawer dosyasından çağrıldı
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Container(
@@ -426,7 +427,8 @@ class _GameState extends State<Game> {
                     letterColor = Colors.red;
                   }
 
-                  return InkWell( //Klavye bölümü
+                  //Klavye bölümü
+                  return InkWell( 
                     onTap: () => checkletter(letter),
                     child: Center(
                       child: Text(
