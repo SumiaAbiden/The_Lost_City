@@ -6,7 +6,6 @@ class SavedWords extends StatefulWidget {
   const SavedWords({super.key});
 
 
-  // 1. addWord metodunu buraya taşıyın (StatefulWidget'a ekleyin)
   static List<String> savedWords = [];
   static List<String> savedDescriptions = [];
 
@@ -28,7 +27,7 @@ class _SavedWordsState extends State<SavedWords> {
       appBar: AppBar(
         title: const Text('Save Cities'), // Başlık metni
         centerTitle: true, // Başlığı ortala
-        backgroundColor: Color.fromRGBO(69, 119, 117, 100), // Sabit renk vermek isterseniz
+        backgroundColor: Color.fromRGBO(69, 119, 117, 100), // Sabit renk vermek
         iconTheme: IconThemeData(color: Colors.white), // İkon rengi
       ),
       drawer: AppDrawer(),
