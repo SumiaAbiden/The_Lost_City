@@ -302,13 +302,13 @@ class _GameState extends State<Game> {
         guessedletters.add(letter);
         points += 5;
       });
-      _playSound("correct"); //
+      _playSound("correct"); //Doğru cevap ses efekti
     } else {
       setState(() {
         wrongletters.add(letter);
         status += 1;
       });
-      _playSound("wrong"); //
+      _playSound("wrong"); //Yanlış cevap ses efekti
     }
 
     //Kazanma durumu kontrolü
