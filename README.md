@@ -123,11 +123,11 @@ Bu kullanıcıyla giriş yaparak uygulamanın tüm özelliklerini deneyebilirsin
 
 | Sayfa             | Açıklama                                                   | Görsel                                                  |
 |-------------------|------------------------------------------------------------|---------------------------------------------------------|
+| **Oyun Ekranı**   | Şehir tahmini yapılan harf oyunu ekranı                    | <img src="assets/screenshots/Game1.png" width="300"/>   |
 | **Ana Sayfa**     | Kullanıcıyı ilk karşılayan oyuna başlama sayfası           | <img src="assets/screenshots/Home.png" width="300"/>    |
 | **Giriş Ekranı**  | Kullanıcı giriş ekranı (e-posta/şifre & Google & Github)   | <img src="assets/screenshots/Login.png" width="300"/>   |
 | **Profil**        | Kullanıcının kişisel bilgilerini ekleyip düzenlediği ekran | <img src="assets/screenshots/Profile.png" width="300"/> |
 | **Kaydedilenler** | Daha önce kaydedilen şehirlerin listelendiği ekran         | <img src="assets/screenshots/Saved.png" width="300"/>   |
-| **Oyun Ekranı**   | Şehir tahmini yapılan harf oyunu ekranı                    | <img src="assets/screenshots/Game.png" width="300"/>    |
 
 ---
 
