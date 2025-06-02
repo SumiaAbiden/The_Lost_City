@@ -111,8 +111,8 @@ Bu kullanıcıyla giriş yaparak uygulamanın tüm özelliklerini deneyebilirsin
 
 | Üye Adı               | Katkı Alanları                                                                                                                                                                                                                                                  |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Sumia Abiden**      | - Proje fikrinin belirlenmesi ve planlama <br> - Uygulama genel UI/UX tasarımı <br> - Supabase veritabanı kurulumu ve veri okuma/yazma işlemleri <br> - SharedPreferences ile verilerin yerel olarak saklanması <br> - Skor kayıt sistemi entegrasyonu <br> - Oyun mekanikleri ve görsel iyileştirmeler                       |
-| **Mariam Kaibalieva** | - Firebase Authentication ile giriş/kayıt/şifre sıfırlama akışlarının yazılması <br> - Firestore ile kullanıcı profil verilerinin saklanması <br> - Tema ve ses ayarlarının Provider ile yönetilmesi <br> - Uygulamanın hata testleri ve performans denetimleri |
+| **Sumia Abiden**      | - Uygulama genel UI/UX tasarımı (Login.dart & Game.dart & SavedWords.dart & AppDrawer.dart & CustomAppBar.dart) <br> - Supabase veritabanı kurulumu ve veri okuma/yazma işlemleri <br> - SharedPreferences ile verilerin yerel olarak saklanması (settings_provider.dart & profile_provider.dart) <br> - Skor kayıt sistemi entegrasyonu <br> - Oyun mekanikleri ve görsel iyileştirmeler                       |
+| **Mariam Kaibalieva** | - Uygulama genel UI/UX tasarımı (Home.dart & ProfilePage.dart & EditProfilePage.dart & Settings.dart) <br>- Firebase Authentication ile giriş/kayıt/şifre sıfırlama akışlarının yazılması <br> - Firestore ile kullanıcı profil verilerinin saklanması <br> - Tema ve ses ayarlarının Provider ile yönetilmesi <br> - Uygulamanın hata testleri ve performans denetimleri |
 
 
 ---
