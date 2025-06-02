@@ -85,7 +85,7 @@ Bu kullanıcıyla giriş yaparak uygulamanın tüm özelliklerini deneyebilirsin
 - "Hakkında" bölümü üzerinden uygulama bilgileri görüntülenebilir.
 
 
-> ⚙️ Tüm sayfalarda `BasePage` bileşeni kullanılarak ortak bir yapı (AppBar + gövde) korunmuştur. Tema ve ayarlar Provider ile yönetilir.
+> ⚙️ Tüm sayfalarda `BasePage` bileşeni kullanılarak ortak bir yapı (AppBar + gövde) korunmuştur. Tema ve ayarlar Provider ile yönetilmiştir.
 
 ---
 
