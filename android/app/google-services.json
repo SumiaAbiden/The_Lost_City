@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563746985689",
+    "project_id": "thelostcity-45cef",
+    "storage_bucket": "thelostcity-45cef.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563746985689:android:79c8d189c94e496c2010c8",
+        "android_client_info": {
+          "package_name": "com.example.proje2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrIp1P9-f_c3ROQ-pv-02QCIsLS3g7vkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
