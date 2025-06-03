@@ -78,7 +78,7 @@ Bu kullanıcıyla giriş yaparak uygulamanın tüm özelliklerini deneyebilirsin
 ### 6. Kayıtlı Şehirler - `SavedWords`
 - Giriş yapan mail adresine göre kullanıcının daha önce kaydettiği şehirler supabase veritabanından çekilir.
 - Şehir ismi ve kullanıcı skorunu içerir.
-- Kullanıcının hesaptan çıkış yapması durumunda kaydedilen şehirler silinir.
+- Kullanıcının hesaptan çıkış yapması durumunda kaydedilen şehirler arayüzden silinir.
 
 ### 7. Ayarlar Ekranı - `SettingsPage`
 - Uygulama teması (karanlık/açık mod) ve ses efektleri yönetilebilir.
