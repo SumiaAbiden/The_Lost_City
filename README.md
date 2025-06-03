@@ -149,7 +149,3 @@ git clone https://github.com/SumiaAbiden/The_Lost_City.git
 cd The_Lost_City
 flutter pub get
 flutter run
-
-
-
-
