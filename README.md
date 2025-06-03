@@ -63,7 +63,7 @@ Bu kullanıcıyla giriş yaparak uygulamanın tüm özelliklerini deneyebilirsin
 - Kullanıcının doğum yeri, doğum tarihi ve yaşadığı şehir gibi bilgileri gösterir.
 - Firebase ve Supabase'den veriler çekilerek ekrana yansıtılır.
 - Kullanıcı e-postası da bu sayfada yer alır.
-- 
+  
 ### 4. Ana Sayfa - `HomePage`
 - Oyun başlatma, profil görüntüleme, skor ve ayarlara erişim sağlar.
 - Modern ve sade bir arayüz sunar.
