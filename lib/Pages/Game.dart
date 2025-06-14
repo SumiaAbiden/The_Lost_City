@@ -146,54 +146,77 @@ class _GameState extends State<Game> {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
           backgroundColor: Colors.grey[50],
           child: Container(
-            constraints: BoxConstraints(
-              maxWidth: 400,
-              minWidth: MediaQuery.of(context).size.width * 0.4,
-            ),
+            width: MediaQuery.of(context).size.width * 0.5,
             padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
+            decoration: BoxDecoration(
+              color: Colors.grey[50],
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Stack(
               children: [
-                Text(
-                  description,
-                  style: const TextStyle(
-                    fontFamily: 'RetroGaming',
-                    color: Colors.black87,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    height: 1.4,
+                // İçerik sütunu, biraz üst boşluk bıraktık x için
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        description,
+                        style: const TextStyle(
+                          fontFamily: 'RetroGaming',
+                          color: Colors.black87,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          height: 1.4,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 30),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color.fromRGBO(69, 119, 117, 1),
+                            padding: const EdgeInsets.symmetric(vertical: 14),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            elevation: 3,
+                          ),
+                          onPressed: () {
+                            SavedWords.addWord(word, description);
+                            saveCityToSupabase(word, points);
+                            Navigator.pop(context);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('City Saved!')),
+                            );
+                          },
+                          child: const Text(
+                            "Save City",
+                            style: TextStyle(
+                              fontFamily: 'RetroGaming',
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 30),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(69, 119, 117, 1),
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      elevation: 3,
-                    ),
+
+                // Sağ üst köşedeki küçük x butonu
+                Positioned(
+                  right: 0,
+                  top: 0,
+                  child: IconButton(
+                    icon: const Icon(Icons.close, color: Colors.grey),
+                    splashRadius: 20,
+                    tooltip: 'Close',
                     onPressed: () {
-                      SavedWords.addWord(word, description);
-                      saveCityToSupabase(word, points);
                       Navigator.pop(context);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('City Saved!')),
-                      );
                     },
-                    child: const Text(
-                      "Save City",
-                      style: TextStyle(
-                        fontFamily: 'RetroGaming',
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
                   ),
                 ),
               ],
@@ -203,6 +226,7 @@ class _GameState extends State<Game> {
       },
     );
   }
+
 
 
   //Kazanma Durumu popup
