@@ -1,6 +1,6 @@
 # The Lost City
 
-**The Lost City** is an interactive hangman city-guessing game developed with Flutter. Players guess world cities letter by letter, just like in Hangman, and discover fun facts about them. The app offers a modern UI, dark mode, sound effects, secure user authentication, and score tracking using Firebase and Supabase.
+**The Lost City** is an interactive hangman city-guessing game developed with Flutter. Players guess world cities letter by letter, just like in Hangman, and discover facts about them. The app offers a modern UI, dark mode, sound effects, secure user authentication, and score tracking using Firebase and Supabase.
 
 ---
 
